@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  AddMealModelView.swift
 //  KosherMeals
 //
 //  Created by julie ryan on 29/07/2024.
@@ -8,7 +8,7 @@
 import SwiftUI
 import SwiftData
 
-struct ContentView: View {
+struct AddMealModelView: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var meals: [Meal]
 
@@ -22,14 +22,14 @@ struct ContentView: View {
                         Text(meal.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
                     }
                 }
-                .onDelete(perform: deleteItems)
+                .onDelete(perform: deleteMeal)
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     EditButton()
                 }
                 ToolbarItem {
-                    Button(action: addItem) {
+                    Button(action: addMeal) {
                         Label("Add Item", systemImage: "plus")
                     }
                 }
@@ -39,14 +39,14 @@ struct ContentView: View {
         }
     }
 
-    private func addItem() {
+    private func addMeal() {
         withAnimation {
             let newMeal = Meal(timestamp: Date())
             modelContext.insert(newMeal)
         }
     }
 
-    private func deleteItems(offsets: IndexSet) {
+    private func deleteMeal(offsets: IndexSet) {
         withAnimation {
             for index in offsets {
                 modelContext.delete(meals[index])
@@ -56,6 +56,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
-        .modelContainer(for: Meal.self, inMemory: true)
+    AddMealModelView()
 }

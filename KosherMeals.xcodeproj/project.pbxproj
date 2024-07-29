@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		CE22B11D2C57A2070006D2C2 /* KosherMealsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE22B11C2C57A2070006D2C2 /* KosherMealsApp.swift */; };
 		CE22B11F2C57A2070006D2C2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE22B11E2C57A2070006D2C2 /* ContentView.swift */; };
-		CE22B1212C57A2070006D2C2 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE22B1202C57A2070006D2C2 /* Item.swift */; };
 		CE22B1232C57A20A0006D2C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE22B1222C57A20A0006D2C2 /* Assets.xcassets */; };
 		CE22B1262C57A20A0006D2C2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE22B1252C57A20A0006D2C2 /* Preview Assets.xcassets */; };
 		CE22B1302C57A20A0006D2C2 /* KosherMealsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE22B12F2C57A20A0006D2C2 /* KosherMealsTests.swift */; };
 		CE22B13A2C57A20A0006D2C2 /* KosherMealsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE22B1392C57A20A0006D2C2 /* KosherMealsUITests.swift */; };
 		CE22B13C2C57A20A0006D2C2 /* KosherMealsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE22B13B2C57A20A0006D2C2 /* KosherMealsUITestsLaunchTests.swift */; };
+		CEDF47C62C57A3CD002B2D25 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDF47C52C57A3CD002B2D25 /* Meal.swift */; };
+		CEDF47C82C57A421002B2D25 /* AddMealModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDF47C72C57A421002B2D25 /* AddMealModelView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +39,6 @@
 		CE22B1192C57A2060006D2C2 /* KosherMeals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KosherMeals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE22B11C2C57A2070006D2C2 /* KosherMealsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KosherMealsApp.swift; sourceTree = "<group>"; };
 		CE22B11E2C57A2070006D2C2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		CE22B1202C57A2070006D2C2 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		CE22B1222C57A20A0006D2C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE22B1252C57A20A0006D2C2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CE22B12B2C57A20A0006D2C2 /* KosherMealsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KosherMealsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +46,8 @@
 		CE22B1352C57A20A0006D2C2 /* KosherMealsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KosherMealsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE22B1392C57A20A0006D2C2 /* KosherMealsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KosherMealsUITests.swift; sourceTree = "<group>"; };
 		CE22B13B2C57A20A0006D2C2 /* KosherMealsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KosherMealsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CEDF47C52C57A3CD002B2D25 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		CEDF47C72C57A421002B2D25 /* AddMealModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMealModelView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +78,6 @@
 		CE22B1102C57A2060006D2C2 = {
 			isa = PBXGroup;
 			children = (
-				CE22B1482C57A20E0006D2C2 /* New Group */,
 				CE22B11B2C57A2060006D2C2 /* KosherMeals */,
 				CE22B12E2C57A20A0006D2C2 /* KosherMealsTests */,
 				CE22B1382C57A20A0006D2C2 /* KosherMealsUITests */,
@@ -97,9 +98,11 @@
 		CE22B11B2C57A2060006D2C2 /* KosherMeals */ = {
 			isa = PBXGroup;
 			children = (
+				CED213192C57A2A00032BFD6 /* View */,
+				CE22B14A2C57A2220006D2C2 /* ModelView */,
+				CE22B1492C57A2190006D2C2 /* Model */,
 				CE22B11C2C57A2070006D2C2 /* KosherMealsApp.swift */,
 				CE22B11E2C57A2070006D2C2 /* ContentView.swift */,
-				CE22B1202C57A2070006D2C2 /* Item.swift */,
 				CE22B1222C57A20A0006D2C2 /* Assets.xcassets */,
 				CE22B1242C57A20A0006D2C2 /* Preview Content */,
 			);
@@ -131,11 +134,27 @@
 			path = KosherMealsUITests;
 			sourceTree = "<group>";
 		};
-		CE22B1482C57A20E0006D2C2 /* New Group */ = {
+		CE22B1492C57A2190006D2C2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CEDF47C52C57A3CD002B2D25 /* Meal.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE22B14A2C57A2220006D2C2 /* ModelView */ = {
+			isa = PBXGroup;
+			children = (
+				CEDF47C72C57A421002B2D25 /* AddMealModelView.swift */,
+			);
+			path = ModelView;
+			sourceTree = "<group>";
+		};
+		CED213192C57A2A00032BFD6 /* View */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = "New Group";
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,8 +287,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEDF47C62C57A3CD002B2D25 /* Meal.swift in Sources */,
+				CEDF47C82C57A421002B2D25 /* AddMealModelView.swift in Sources */,
 				CE22B11F2C57A2070006D2C2 /* ContentView.swift in Sources */,
-				CE22B1212C57A2070006D2C2 /* Item.swift in Sources */,
 				CE22B11D2C57A2070006D2C2 /* KosherMealsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
